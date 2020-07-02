@@ -2,15 +2,16 @@ package exam.quizBankContext.domain.model.service;
 
 import exam.quizBankContext.domain.model.blankQuiz.BlankQuiz;
 import exam.quizBankContext.domain.model.quizBank.QuizBank;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-
+@Service
 public class QuizBankClientImpl implements QuizBankClient {
-    private QuizBank quizBank = null;
-    private QuizBankClientImpl() {
-        if(this.quizBank == null) {
-            this.quizBank = new QuizBank(new ArrayList<BlankQuiz>());
-        }
+    private QuizBank quizBank;
+
+    @Autowired
+    public QuizBankClientImpl(QuizBank quizBank) {
+        this.quizBank = quizBank;
     }
 
     @Override

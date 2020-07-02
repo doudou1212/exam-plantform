@@ -17,6 +17,7 @@ public class QuizBank {
     }
 
     public void addBlankQuiz(BlankQuiz blankQuiz) {
+        blankQuiz.setId(this.blankQuizList.size());
         this.blankQuizList.add(blankQuiz);
     }
 

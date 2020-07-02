@@ -16,7 +16,7 @@ public class QuizBankController {
         this.quizBankApplicationService = quizBankApplicationService;
     }
 
-    @GetMapping("/quizbank") //读请求,获取倒序排列的Paper
+    @GetMapping("/quizbank")
     QuizBank getQuizBank() {
         return this.quizBankApplicationService.getQuizBank();
     }
