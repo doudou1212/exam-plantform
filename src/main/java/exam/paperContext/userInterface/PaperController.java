@@ -33,7 +33,7 @@ public class PaperController {
 
     @GetMapping("/papers") //读请求,获取倒序排列的Paper
     List<Paper> getAll() {
-        return paperReadRepository.getAllByReversedOrder();
+        return paperApplicationService.getAll();
     }
 
     @PutMapping("/papers/{paperId}")

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.Objects;
+import java.util.UUID;
 
 @Getter
 @AllArgsConstructor
@@ -12,8 +13,7 @@ public class PaperId implements ValueObject<PaperId> {
     private String id;
 
     public String nextId() {
-        //TODO Generate ID
-        return null;
+        return "paper-" +UUID.randomUUID();
     }
 
     @Override
